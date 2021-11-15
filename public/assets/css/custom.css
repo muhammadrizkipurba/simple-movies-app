@@ -1,0 +1,220 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../fonts/SourceSansPro-BlackItalic.eot');
+  src: url('../fonts/SourceSansPro-BlackItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SourceSansPro-BlackItalic.woff2') format('woff2'),
+      url('../fonts/SourceSansPro-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../fonts/SourceSansPro-Black.eot');
+  src: url('../fonts/SourceSansPro-Black.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SourceSansPro-Black.woff2') format('woff2'),
+      url('../fonts/SourceSansPro-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../fonts/SourceSansPro-Bold.eot');
+  src: url('../fonts/SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SourceSansPro-Bold.woff2') format('woff2'),
+      url('../fonts/SourceSansPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../fonts/SourceSansPro-BoldItalic.eot');
+  src: url('../fonts/SourceSansPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SourceSansPro-BoldItalic.woff2') format('woff2'),
+      url('../fonts/SourceSansPro-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../fonts/SourceSansPro-ExtraLightItalic.eot');
+  src: url('../fonts/SourceSansPro-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SourceSansPro-ExtraLightItalic.woff2') format('woff2'),
+      url('../fonts/SourceSansPro-ExtraLightItalic.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../fonts/SourceSansPro-ExtraLight.eot');
+  src: url('../fonts/SourceSansPro-ExtraLight.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SourceSansPro-ExtraLight.woff2') format('woff2'),
+      url('../fonts/SourceSansPro-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../fonts/SourceSansPro-Italic.eot');
+  src: url('../fonts/SourceSansPro-Italic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SourceSansPro-Italic.woff2') format('woff2'),
+      url('../fonts/SourceSansPro-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../fonts/SourceSansPro-Light.eot');
+  src: url('../fonts/SourceSansPro-Light.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SourceSansPro-Light.woff2') format('woff2'),
+      url('../fonts/SourceSansPro-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../fonts/SourceSansPro-LightItalic.eot');
+  src: url('../fonts/SourceSansPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SourceSansPro-LightItalic.woff2') format('woff2'),
+      url('../fonts/SourceSansPro-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../fonts/SourceSansPro-SemiBold.eot');
+  src: url('../fonts/SourceSansPro-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SourceSansPro-SemiBold.woff2') format('woff2'),
+      url('../fonts/SourceSansPro-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../fonts/SourceSansPro-SemiBoldItalic.eot');
+  src: url('../fonts/SourceSansPro-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SourceSansPro-SemiBoldItalic.woff2') format('woff2'),
+      url('../fonts/SourceSansPro-SemiBoldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../fonts/SourceSansPro-Regular.eot');
+  src: url('../fonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SourceSansPro-Regular.woff2') format('woff2'),
+      url('../fonts/SourceSansPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #010224;
+  --bs-secondary: #8392AB;
+  --bs-success: #82d616;
+  --bs-info: #17c1e8;
+  --bs-warning: #fbcf33;
+  --bs-danger: #ea0606;
+  --bs-light: #e9ecef;
+  --bs-dark: #121212;
+  --bs-white: #fff; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth; } }
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #67748e;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+li,
+button,
+label {
+  font-family: "Source Sans Pro", sans-serif;
+};
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color; }
+
+input,
+button {
+  border-radius: 10px;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit; }
+
+button,
+input {
+  overflow: visible; }
+
+button {
+  text-transform: none; }
+
+[role="button"] {
+  cursor: pointer; }
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+  cursor: pointer; }
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border-style: none; }

@@ -1,4 +1,20 @@
+import { API_KEY, Axios } from "../../utils";
 import { RESET_MOVIES_LIST, RESET_SELECTED_MOVIE, SET_MOVIES_LIST, SET_SELECTED_MOVIE } from "../types";
+
+export const searchMovies = async({ query }) => {
+  const searchQuery = query.split(' ').join('+');
+
+  const res = await Axios.get(
+    `?apikey=${API_KEY}&s=${searchQuery}`,
+    {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    }
+  );
+
+  return res.data;
+};
 
 export const setMoviesList = (movies) => {
   return dispatch => {

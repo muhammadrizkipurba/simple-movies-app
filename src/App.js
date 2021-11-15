@@ -2,6 +2,8 @@ import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { reduxActions } from './redux';
+import { useCallback, useEffect } from 'react';
+import { searchMovies } from './redux/actions';
 
 function App() {
 
@@ -11,7 +13,14 @@ function App() {
   const dispatch = useDispatch();
   const { setMoviesList, resetMoviesList } = bindActionCreators(reduxActions, dispatch);
 
-  console.log(moviesList)
+  const fetchMovies = useCallback(async() => {
+    const res = await searchMovies({ query : "batman returns" });
+    console.log(res)
+  }, [searchMovies]);
+
+  // useEffect(() => {
+  //   const movies = fetchMovies();
+  // }, [fetchMovies]);
 
   return (
     <div className="App">

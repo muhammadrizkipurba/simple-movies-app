@@ -22,7 +22,7 @@ const store = createStore(
 
 const persistor = persistStore(store);
 
-export { 
-  persistor, 
-  store 
+export {
+  persistor,
+  store
 };
