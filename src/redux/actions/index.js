@@ -1,11 +1,24 @@
 import { API_KEY, Axios } from "../../utils";
-import { RESET_MOVIES_LIST, RESET_SELECTED_MOVIE, SET_MOVIES_LIST, SET_SELECTED_MOVIE } from "../types";
+import { RESET_MOVIES_LIST, RESET_SEARCH_QUERY, SET_MOVIES_LIST, SET_SEARCH_QUERY } from "../types";
 
-export const searchMovies = async({ query }) => {
+export const searchMovies = async({ query, pageNumber }) => {
   const searchQuery = query.split(' ').join('+');
 
   const res = await Axios.get(
-    `?apikey=${API_KEY}&s=${searchQuery}`,
+    `?apikey=${API_KEY}&s=${searchQuery}&page=${pageNumber}`,
+    {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    }
+  );
+
+  return res.data;
+};
+
+export const fetchSingleMovie = async({ id }) => {
+  const res = await Axios.get(
+    `?apikey=${API_KEY}&i=${id}`,
     {
       headers: {
         'Content-Type': 'application/json'
@@ -33,19 +46,19 @@ export const resetMoviesList = () => {
   };
 };
 
-export const setSelectedMovie = (movie) => {
+export const setSearchQuery = (movie) => {
   return dispatch => {
     dispatch({
-      type: SET_SELECTED_MOVIE,
+      type: SET_SEARCH_QUERY,
       payload: movie
     });
   };
 };
 
-export const resetSelectedMovie = () => {
+export const resetSearchQuery = () => {
   return dispatch => {
     dispatch({
-      type: RESET_SELECTED_MOVIE
+      type: RESET_SEARCH_QUERY
     });
   };
 };

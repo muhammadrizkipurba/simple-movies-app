@@ -159,8 +159,8 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #67748e;
-  background-color: #fff;
+  color: var(--bs-dark);
+  background-color: #eeeeee;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
@@ -195,7 +195,8 @@ input {
   overflow: visible; }
 
 button {
-  text-transform: none; }
+  text-transform: none; 
+  transition: .4s all ease-in-out;}
 
 [role="button"] {
   cursor: pointer; }
@@ -205,6 +206,12 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button; }
+
+button:disabled,
+button[disabled] {
+  background-color: var(--bs-light);
+  color: #8392AB; 
+  cursor: default; }
 
 button:not(:disabled),
 [type="button"]:not(:disabled),
@@ -218,3 +225,37 @@ button::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
   padding: 0;
   border-style: none; }
+
+.movie-card {
+  position: relative;
+  transition: 0.3s all ease-in-out;
+  overflow: hidden;
+}
+
+.movie-card:hover {
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+.card-overlay {
+  background-color: var(--bs-dark);
+  position: absolute;
+  bottom: -20px;
+  opacity: 0;
+  z-index: 2;
+  width: 100%;
+  padding: 10px;
+  transition: .3s all ease-in-out;
+}
+
+.movie-card:hover .card-overlay {
+  opacity: 1;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  .card-overlay {
+    bottom: 0;
+    opacity: 1; 
+  }
+}
