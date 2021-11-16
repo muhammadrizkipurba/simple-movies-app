@@ -74,7 +74,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <div className='flex items-start justify-between lg:flex-row'>
+      <div className='flex items-center justify-center lg:items-start lg:justify-between flex-col lg:flex-row'>
         <h1 className="text-5xl font-bold text-center mb-0 mt-5">Movies App</h1>
         <SearchInput
           suggestions={suggestions}
