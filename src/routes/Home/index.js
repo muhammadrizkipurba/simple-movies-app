@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
 import { reduxActions } from "../../redux";
@@ -10,6 +10,7 @@ import LoadingSpinner from "../../components/loadingSpinner";
 import Notification from "../../components/notification";
 
 const HomePage = () => {
+  const [suggestions, setSuggestions] = useState([]);
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState(null);
   const [query, setQuery] = useState("");
@@ -43,6 +44,24 @@ const HomePage = () => {
     }
   };
 
+  const getSuggestions = useCallback(async(query) => {
+    const res = await funct.onSearchMovies({ query, pageNumber: 1});
+
+    if(res.Response.toLowerCase() === 'true') {
+      const matchKeywords = res.Search.map(item => item.Title);
+      setSuggestions(matchKeywords);
+    }
+  }, []);
+
+  useEffect(() => {
+    if(query.length > 0) {
+      getSuggestions(query);
+    } else {
+      setSuggestions([]);
+    };
+    // eslint-disable-next-line
+  }, [query])
+
   const onChangeInput = ({ target }) => {
     resetMoviesList();
     setQuery(target.value);
@@ -55,9 +74,15 @@ const HomePage = () => {
 
   return (
     <div>
-      <div className='flex items-center justify-between lg:flex-row'>
-        <h1 className="text-5xl font-bold text-center mb-0">Movies App</h1>
+      <div className='flex items-start justify-between lg:flex-row'>
+        <h1 className="text-5xl font-bold text-center mb-0 mt-5">Movies App</h1>
         <SearchInput
+          suggestions={suggestions}
+          resetSuggestions={() => setSuggestions([])}
+          setSearchQuery={(val) => {
+            onChangeInput({target: {value: val}});
+            setSuggestions([]);
+          }}
           value={query}
           onChange={onChangeInput}
           placeholder="Search movie..."
